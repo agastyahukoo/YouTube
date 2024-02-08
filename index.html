@@ -11,13 +11,14 @@
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <style>
   body, html {
-    height: 100%;
+    height: auto; /* Changed from 100% to auto to allow content to define the height */
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     color: #e0e0e0;
-    overflow: hidden;
     background: #121212;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
   }
 
   .bg {
@@ -36,10 +37,11 @@
 
   .content {
     position: relative;
-    height: 100%;
+    min-height: 100vh; /* Ensure it takes at least the full height of the viewport */
     display: flex;
-    align-items: center;
+    align-items: center; /* This can still center the content vertically */
     justify-content: center;
+    padding: 20px; /* Add some padding to ensure content does not touch the edges */
   }
 
   .centered-box {
@@ -88,7 +90,7 @@
 <div class="content">
   <div class="centered-box">
     <div align="center">
-      <img src="https://avatars.githubusercontent.com/u/136306593?v=4" alt="Agastya Hukoo's Profile Picture" width="200" height="200" style="border-radius:50%">
+      <img src="https://avatars.githubusercontent.com/u/136306593?v=4" alt="Agastya Hukoo" width="200" height="200" style="border-radius:50%">
       <h1>Agastya Hukoo</h1>
       <h3>Competitive Programmer | Java & C# Enthusiast | Front-End Developer</h3>
     </div>
